@@ -216,7 +216,7 @@ In data series, one important measurement is called **Moving Average**
       - Remove from the front
       - These operations become O(1) always
     - Adding element overrides oldest element in buffer
-      - Maintain (low, high) indices within buffer ![CircularBuffer](CircularBuffer.JPg)
+      - Maintain (low, high) indices within buffer ![CircularBuffer](CircularBuffer.JPG)
 
 - Circular Buffer Data Type Definition
   - fixed-size storage
