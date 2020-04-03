@@ -275,3 +275,19 @@ yield is a keyword that is used like return, except the function will return a g
   - Make sure you structure data effectively for efficient code
 - Primary weakness is contiguous memory storage
   - Highly optimised in CPyton but we can do better
+
+## 10. Linked Lists
+
+### Pointer-based Data Structures
+
+- Contiguous memory such as an array have known weaknesses
+  - Removing one value forces move of others
+  - Inserting one value does the same
+- Linked Lists were common solution in early Computer languages, such as C and Perl
+  - Worth reviewing for basic skills
+- LinkedNode object
+  - Knows value
+  - Has Reference to subsequent LinkedNode object
+  - If there is no subsequent one, next is None
+- Object reference was formerly called **pointer**
+![LinkedNode](LinkedNode.JPG)
