@@ -9,6 +9,7 @@ from circBuffer import CircularBuffer
 
 # This class extends CircularBuffer
 
+
 class MovingAverage(CircularBuffer):
     def __init__(self, size):
         CircularBuffer.__init__(self, size)
@@ -36,8 +37,9 @@ class MovingAverage(CircularBuffer):
     def __repr__(self):
         if self.isEmpty():
             return 'ma:[]'
-        
+
         return 'ma: [' + ','.join(map(str, self)) + ']:' + str(self.getAverage())
+
 
 ma = MovingAverage(4)
 ma.add(5)
@@ -46,6 +48,7 @@ ma.add(3)
 ma.add(9)
 
 print(ma)
+
 
 def fibonacci(n):
     a = b = 1
@@ -56,14 +59,16 @@ def fibonacci(n):
         result.append(b)
     return result
 
+
 def fibonacciGen(n):
-    a = b=1
+    a = b = 1
     yield a
     yield b
     while n > 2:
         n -= 1
         a, b = b, a+b
         yield b
+
 
 for _ in fibonacci(10):
     print(_)
