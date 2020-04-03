@@ -1,6 +1,12 @@
-# Orielly Data Structures in Python
+# Orielly Data Structures in Python Course
 
-990113
+By God.
+
+This readme file is written by Mohammad Reza Dehghani Tafti.
+
+Contact me at dehghani735@gmail.com
+
+Start Date: 13990113
 
 ---
 
