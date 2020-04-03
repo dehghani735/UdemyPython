@@ -202,6 +202,7 @@ In data series, one important measurement is called **Moving Average**
           del window[0]
         window.append(value)
       ```
+
     - del window[0]: This is **Significantly inefficient**
     - Never forget that a Python **List** is an array
       - Remove 0th element must copy n-1 elements.
@@ -254,3 +255,23 @@ yield is a keyword that is used like return, except the function will return a g
 ## 9. Project - Moving Average _ Stdev
 
 [top](#orielly-data-structures-in-python-course)
+
+### Python lists, Primary Weakness
+
+- Avoid functions that return **list** objects whose values are simply iterated.
+  - Consider **generator**
+  - fibonacci with list
+
+### Python Generator, Alternative to Constructing list objects
+
+- Generator avoids contstructing lists
+  - when can compute the elements using computation
+  - fibonacci with Generator (go to Code)
+
+### Conclusion
+
+- Many Python programmers rely solely on lists
+  - Suitable for prototype and investigations
+  - Make sure you structure data effectively for efficient code
+- Primary weakness is contiguous memory storage
+  - Highly optimised in CPyton but we can do better
