@@ -86,7 +86,7 @@ Designed for consistency of interface
 
 ## 3. API Operations
 
-[top](#orielly-data-structures-in-python)
+[top](#orielly-data-structures-in-python-course)
 
 Python tries to use the same operation name among different data types.
 
@@ -99,6 +99,8 @@ Python tries to use the same operation name among different data types.
 | Deque q | len(q) | append | del, pop | in |
 
 ## 4. Analysis Techniques
+
+[top](#orielly-data-structures-in-python-course)
 
 It consists of time analysis and space analysis
 
@@ -114,6 +116,8 @@ A problem: fine if a List has duplicate values:
 - Using two for loops; it uses no extra space; but O(n**2)
 
 ## 5. Design Principles for Data Structures
+
+[top](#orielly-data-structures-in-python-course)
 
 ### Buil-in Type Complexity
 
@@ -131,6 +135,8 @@ A problem: fine if a List has duplicate values:
   - Most frequently occurs with hashing whose performance depends on statistical estimates.
 
 ## 6. Using lists to Implement Stack
+
+[top](#orielly-data-structures-in-python-course)
 
 Lists are ubiquitous: Python lists are everywhere
 
@@ -157,12 +163,16 @@ Example: Use List as Stack
 
 ## 7. Principle - Separate Structure from Function
 
+[top](#orielly-data-structures-in-python-course)
+
 - Tuple are read-only structures
   - Useful when you want to provide information that cannot be changed
   - Most extreme case since structure has no function
   - Supports iteration, indexing, contains
 
 ## 8. Example - Circular Buffer
+
+[top](#orielly-data-structures-in-python-course)
 
 Problem: Process time data series
 
@@ -243,3 +253,4 @@ yield is a keyword that is used like return, except the function will return a g
 
 ## 9. Project - Moving Average _ Stdev
 
+[top](#orielly-data-structures-in-python-course)
