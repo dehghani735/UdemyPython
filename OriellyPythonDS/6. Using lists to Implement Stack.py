@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Apr 02 22:15:43 2020
+
+@author: m.dehghani
+Orielly Python DS
+"""
 class Stack:
     def __init__(self):
         self.__stack = []

@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Apr 03 22:15:43 2020
+
+@author: m.dehghani
+Orielly Python DS
+"""
 class CircularBuffer:
     def __init__(self, size):
         """construct fixed size buffer"""
