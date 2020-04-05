@@ -291,3 +291,17 @@ yield is a keyword that is used like return, except the function will return a g
   - If there is no subsequent one, next is None
 - Object reference was formerly called **pointer**
 ![LinkedNode](LinkedNode.JPG)
+
+### Pointer-based Data Structures: List
+
+- LinkedList object manages structure of aggregate
+  - Knows first LinkedNode called head
+- Example: In final LinkedNode, next is None ![LinkedList](LinkedList.JPg)
+
+### Pointer-based Data Structures: Operations
+
+- Efficient Operations: Both O(1)
+  - Remove first value (pop in python) from LinkedList
+  - Prepared new value to LinkedList
+- Other Operations
+  - Remove target value  -> O(n)
