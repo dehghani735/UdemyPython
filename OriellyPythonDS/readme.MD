@@ -305,3 +305,20 @@ yield is a keyword that is used like return, except the function will return a g
   - Prepared new value to LinkedList
 - Other Operations
   - Remove target value  -> O(n)
+
+## 11. Queues
+
+### Pointer-Based Queues Using Linked Lists
+
+- Queue requires efficient O(1) operations
+  - Append to the end(tail)
+  - Remove from the front (head)
+- Queue stores tail node as well as head node ![Queue](Queue.JPG)
+
+### Pointer-Based Queues Summary
+
+- You don't need to (re)implement Queue
+  - Use collections.deque instead
+  - 5x faster on sample behavior
+  - Implemented in C ![deque](deque.JPg)
+
