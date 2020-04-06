@@ -11,8 +11,6 @@ Start Date: 13990113
 ---
 
 ## 2. Built-in Data Types
-<!-- 991013 -->
-> **TODO**. Create an H2
 
 ### List
 
@@ -322,3 +320,9 @@ yield is a keyword that is used like return, except the function will return a g
   - 5x faster on sample behavior
   - Implemented in C ![deque](deque.JPg)
 
+## 12. Project - Detect Cycles in Linked List
+
+### Pointer-Based Interview Question
+
+- How can you detect a cycle or infinite linked list?
+- Pointer-base Solution ![checkInfinite](checkInfinite.JPG)
