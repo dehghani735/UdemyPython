@@ -1,4 +1,4 @@
-# Orielly Data Structures in Python Course
+# Oreilly Data Structures in Python Course
 
 By God.
 
@@ -326,3 +326,27 @@ yield is a keyword that is used like return, except the function will return a g
 
 - How can you detect a cycle or infinite linked list?
 - Pointer-base Solution ![checkInfinite](checkInfinite.JPG)
+
+## 13. Prefix Tree
+
+### Pointer-based Alternative Example: Prefix Tree
+
+- A **Prefix Tree** is a data structure that compactly stores strings
+  - Boxes that terminate words are shaded yellow
+- Use **dict** as alternative to pointers
+  - Observe regularity of structure
+  - Each box is a **dict** object ![PrefixTree](PrefixTree.JPG)
+
+- Python dict allows associative storage d[k] = v
+  - Store nested dict objects as values
+  - Each dict refers up to 26 other dict objects
+  - To record word, associate special WordKey in corresponding dict
+- Set semantics enforced
+  - add and remove return Boolean values
+
+### Pointer-based Structure Summary
+
+- Provides structural basis for recursive data structures
+- Code will not compete with built-in types
+- Python Garbage collection reclaims unused nodes
+

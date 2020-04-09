@@ -2,4 +2,4 @@
 
 Hi everybody.
 
-Orielly Python Data Structure Course is in OriellyPythonDS
+Oreilly Python Data Structure Course is in OreillyPythonDS
