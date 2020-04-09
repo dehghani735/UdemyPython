@@ -350,3 +350,75 @@ yield is a keyword that is used like return, except the function will return a g
 - Code will not compete with built-in types
 - Python Garbage collection reclaims unused nodes
 
+## 14. Binary Tree
+
+### Recursive Thinking, Search List
+
+- A **list** is a linear structure
+  - Naturally subdivides a problem one step at a time
+  - Recursion can also be used ![linearVsRecursion](linearVsRecursion.JPG)
+
+### Recursive Thinking, Search Linked List
+
+- A recursive method calls itself
+  - Base case
+  - Action and Recursive Step
+- Search in Linked List
+- Sum of Linked List
+
+### Recursive Thinking, Fibonacci
+
+- Fibonacci standard example
+  - Not always the most efficient implementation
+  - fib(40) takes nearly a minute to complete 
+- **Must apply recursion wisely**
+  - A natural fit with **recursive data structures**
+
+- *When I have a List or even Linked List, I kind of force me to think linearly.*
+
+### Better structure for Aggregate
+
+- Assume `aList = [1,2,3,4,5, ..., 14,15] `
+  - Searching for 9 is an O(n) operation
+  - May have to search entire list
+  - Data is unordered (and unstructured)
+- Requirements
+  - Define "just enough" structure to speed up search
+  - Without excessive maintenance costs (i.e. sorting)
+
+### Recursive Structure, Binary Search Tree
+
+- **Grandfather of all recursive data structures**
+  - Most common use for *Binary Search Tree (BST)*
+  - It is based on idea of having [**Pointers**](#pointer-based-data-structures-operations)
+  - A BinaryTree has a special root node
+  - Each BinaryNode object has a value
+  - A BinaryNode may have a *left* or *right* child node ![BinaryNode](BinaryNode.JPG)
+  - Binary Search Tree Property
+    - All values in Tleft for n are <= n.value
+    - All values in Tright for n are >= n.value
+  - Observation
+    - Each node is root of a BST
+    - This hierarchical property ensures efficient processing => because it allows me to apply the design principle of divide and conquire ![BST](BST.JPG)
+
+### Binary Search Tree, Data Type Operations
+
+- O(log n) operations
+  - search(val) returns Boolean
+  - remove(val) returns Boolean
+  - add(val) returns Boolean
+- O(n) operations
+  - Iterate over all values
+
+### Binary Search Tree, Search Intuition
+
+- Searching in a BST is O(log n) behavior
+  - First data structure guaranteeing this performance
+- Fully balanced trees are best
+  - To search for 9, can discard half of values at each remaining node 
+  - log(16) = 4 ![searchBST](searchBST.JPg)
+
+### Binary Search Tree, Add Intuition
+
+- Just look for value and insert if not there ![addBST](addBST.JPG)
+
