@@ -427,3 +427,18 @@ yield is a keyword that is used like return, except the function will return a g
 ### Binary Search Tree, Remove Intuition
 
 - Remove value uses elegant recursion ![RemoveBST](RemoveBST.JPG)
+
+## 16. Binary Tree Retrieval Methods
+
+### Binary Search Tree, Data Type Operations
+
+- O(log n) operations
+  - getMin() returns left-most side
+  - getMax() returns right-most side
+
+### Binary Tree Project: Find Closest Value to Target
+
+- Implement following in O(log n)
+  - closest(value) returns value in BST to target
+  - Similar to \_\_contains\_\_ method
+  - Non-recursive solution 
