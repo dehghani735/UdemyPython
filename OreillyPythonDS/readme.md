@@ -422,3 +422,8 @@ yield is a keyword that is used like return, except the function will return a g
 
 - Just look for value and insert if not there ![addBST](addBST.JPG)
 
+## 15. Implementation of Remove
+
+### Binary Search Tree, Remove Intuition
+
+- Remove value uses elegant recursion ![RemoveBST](RemoveBST.JPG)
