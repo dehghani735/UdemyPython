@@ -5,7 +5,7 @@ class BinaryNode:
         self.right = None
 
     def add(self, value):
-        if value <= self.value: 
+        if value <= self.value:
             self.left = self.addToSubTree(self.left, value)
         elif value > self.value:
             self.right = self.addToSubTree(self.right, value)
@@ -42,6 +42,17 @@ class BinaryNode:
         if parent:
             return parent.remove(value)
         return None
+
+    def inorder(self):
+        if self.left:
+            for v in self.left.inorder():
+                yield v
+            
+        yield self.value
+
+        if self.right:
+            for v in self.right.inorder():
+                yield v
 
 class BinaryTree:
     def __init__(self):
@@ -108,6 +119,11 @@ class BinaryTree:
         
         return False
 
+    def __iter__(self):
+        if self.root:
+            for v in self.root.inorder():
+                yield v
+
 b = BinaryTree()
 b.add(7)
 print(b.root.value)
@@ -141,3 +157,16 @@ print(c.closest(4))
 c.add(-10)
 
 print(c.closest(-20))
+
+print('*' * 10)
+
+d = BinaryTree()
+
+d.add(10)
+d.add(2)
+d.add(6)
+d.add(3)
+d.add(7)
+
+for _ in d:
+    print(_)

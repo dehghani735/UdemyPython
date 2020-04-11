@@ -442,3 +442,20 @@ yield is a keyword that is used like return, except the function will return a g
   - closest(value) returns value in BST to target
   - Similar to \_\_contains\_\_ method
   - Non-recursive solution 
+
+## 17. Traversal
+
+### Binary Search Tree, Traverse All Values
+
+- Structure designed to also support traversal of all elements of tree **in order**. Think **recursively**
+  - Visit left child
+  - Visit self
+  - Visit right child
+- Other traversals exist
+  - Pre order, Post order
+
+- Python generator solution
+  - Visit left sub-tree
+  - Visit self
+  - Visit right sub-
+- Must implement \_\_contains\_\_ as well
