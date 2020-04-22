@@ -3,6 +3,17 @@ class BinaryNode:
         self.value = value
         self.left = None
         self.right = None
+        self.numLeft = 0
+
+    def adjustCount(self, value, delta):
+        """Adjust numLeft count after value has been added"""
+        if value <= self.value:
+            self.numLeft += delta
+            if self.left:
+                self.left.adjustCount(value, delta)
+        elif value > self.value:
+            if self.right:
+                self.right.adjustCount(value, delta)
 
     def add(self, value):
         if value <= self.value:
@@ -35,6 +46,7 @@ class BinaryNode:
             childKey = child.value
             self.left = self.removeFromParent(self.left, childKey)
             self.value = childKey
+            self.numLeft -= 1
         
         return self
     
@@ -55,8 +67,11 @@ class BinaryNode:
                 yield v
 
 class BinaryTree:
-    def __init__(self):
+    def __init__(self, *start):
         self.root = None
+
+        for _ in start:
+            self.add(_)
     
     def getMin(self):
         if self.root is None:
@@ -79,12 +94,22 @@ class BinaryTree:
     def add(self, value):
         if self.root is None:
             self.root = BinaryNode(value)
+            return True
         else:
-            self.root.add(value)
+            # this check is for set semantics
+            if value in self:
+                return False
+            
+            ret = self.root.add(value)    
+            self.root.adjustCount(value, +1)
     
     def remove(self, value):
-        if self.root is not None:
+        """
+        Remove value from tree. Check if contained, first be attempting to remove, so we can update properly
+        """
+        if value in self:
             self.root = self.root.remove(value)
+            self.root.adjustCount(value, -1)
 
     def closest(self, target):
         if self.root is None:
@@ -170,3 +195,11 @@ d.add(7)
 
 for _ in d:
     print(_)
+
+print('*' * 10)
+
+e = BinaryTree(1,4,2,3,9,8,7,6,5)
+
+
+2 3 4 5 6 7 8
+5 6 7 8 9 10 11

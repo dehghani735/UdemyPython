@@ -447,7 +447,7 @@ yield is a keyword that is used like return, except the function will return a g
 
 ### Binary Search Tree, Traverse All Values
 
-- Structure designed to also support traversal of all elements of tree **in order**. Think **recursively**
+- Structure designed to also support traversal of all elements of tree **in order**. Think **recursively**. It will sort the values in ascending order.
   - Visit left child
   - Visit self
   - Visit right child
@@ -459,3 +459,9 @@ yield is a keyword that is used like return, except the function will return a g
   - Visit self
   - Visit right sub-
 - Must implement \_\_contains\_\_ as well
+
+## 18. Binary Tree Extension
+
+- To find the smallest n'th value in BST.
+- With one small change in tree, we can make this happen efficiently
+- Basic Idea is to have each node track the numbers of node in left sub-tree
