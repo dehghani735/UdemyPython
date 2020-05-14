@@ -92,6 +92,9 @@ class BinaryTree:
         return n.value
 
     def add(self, value):
+        """
+        Insert value into proper location in Binary Search Tree. Maintains Set Semantics.
+        """
         if self.root is None:
             self.root = BinaryNode(value)
             return True
@@ -143,11 +146,36 @@ class BinaryTree:
                 return True
         
         return False
+    
+    def Smallest(self, k):
+        """
+        Return kth smallest element in tree. If k greater than any of elements, return max. If smaller than 0, return min
+        """
+        if self.root is None:
+            raise ValueError("Binary Tree is Empty")
+        if k < 0:
+            k = 0
+        n = self.root
+        while n:
+            if n.numLeft == k:
+                return n.value
+            elif k < n.numLeft:
+                n = n.left
+            else:
+                k = k - n.numLeft - 1 # adjust it so numLeft numbers are gone
+                if n.right is None:
+                    return n.value
+                n = n.right
 
     def __iter__(self):
         if self.root:
             for v in self.root.inorder():
                 yield v
+
+    def __repr__(self):
+        if self.root is None:
+            return "binary:()"
+        return "binary:" +  str(self.root)
 
 b = BinaryTree()
 b.add(7)
@@ -200,6 +228,11 @@ print('*' * 10)
 
 e = BinaryTree(1,4,2,3,9,8,7,6,5)
 
+print(e)
 
-2 3 4 5 6 7 8
-5 6 7 8 9 10 11
+for _ in e:
+    print(_)
+
+print("Smallest: " + str(e.Smallest(0)))
+print("Largest: " + str(e.Smallest(1000)))
+print("First smallest one: " + str(e.Smallest(1)))  ## It has bug (fix it later)

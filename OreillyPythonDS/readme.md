@@ -465,3 +465,41 @@ yield is a keyword that is used like return, except the function will return a g
 - To find the smallest n'th value in BST.
 - With one small change in tree, we can make this happen efficiently
 - Basic Idea is to have each node track the numbers of node in left sub-tree
+
+## 19. Balancing Binary Trees
+
+### Key Principles
+
+- Binary Search Tree (BST) property must always hold
+- Rotations can reduce height while maintaining BST
+
+### Detecting Imbalance
+
+- Each node stores max height from one of its descendants
+- Node is out of balance if the heights of its left and right sub-trees differ more than 1
+- Missing left of right child is considered -1 height ![balanceBST](balanceBST.JPG)
+
+### Rotate Left Around 4
+
+- Detected after 7 is added
+  - Sub-tree rooted at 4 is out of balance ![RotateBST](RotateBST.JPG)
+![rotateLeft](rotateLeft.JPG)
+
+### Rotate Left Around 4 (revised version)
+
+- Detected after 7 is added
+  - Sub-tree rooted at 4 is out of balance ![RotateBST](notBalancedBST.JPG)
+![RotateBST](newBalancedBST.JPG)
+![rotateLeft](newRotateLeft.JPG)
+
+### Understanding when to Rotate
+
+- Insertions can extend one sub-tree a level too far
+- Removals can reduce one sub-tree a level too small
+  - AVL expects a node's sub-trees to only be one level in height apart
+  - Use same mechanism to rebalance as needed
+
+### Four Rotations
+
+- Consider four types of imbalance ![](typeOfRotation.JPG)
+
